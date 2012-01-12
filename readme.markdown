@@ -78,7 +78,7 @@ If you wish to make use of the slider methods and properties outside of the call
     var carousel = null;
     
     $(document).ready(function(){
-        slider = new $.plusShift($('#slider'), {});
+        carousel = new $.plusShift($('#carousel'), {});
     });
     carousel.toSlide('next); // move carousel to the right
     carousel.toSlide('prev'); // move carousel to the left
