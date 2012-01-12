@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; }
+.plusshift { height: 140px; overflow: hidden; width: 600px; }
+.plusshift-target { position: relative; }
+.plusshift-child { float: left; } 
+
+/* 
+
+.plusshift-target .plusshift-active { }
+
+.plusshift-controls { }
+		.plusshift-arrow { }
+		.plusshift-prev { }
+		.plusshift-next { }
+
+.plusshift-pagination { }
+	.plusshift-pagination .plusshift-active { }
+
+*/

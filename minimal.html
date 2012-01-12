@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<title>PlusShift</title>
+	<link href="css/minimal.css" rel="stylesheet" />
+</head>
+<body>
+
+	<ul id="carousel">
+		<li><img src="i/image1.png" /></li>
+		<li><img src="i/image2.png" /></li>
+		<li><img src="i/image3.png" /></li>
+		<li><img src="i/image1.png" /></li>
+		<li><img src="i/image2.png" /></li>
+		<li><img src="i/image3.png" /></li>
+		<li><img src="i/image1.png" /></li>
+		<li><img src="i/image2.png" /></li>
+		<li><img src="i/image3.png" /></li>
+		<li><img src="i/image1.png" /></li>
+		<li><img src="i/image2.png" /></li>
+		<li><img src="i/image3.png" /></li>
+		<li><img src="i/image1.png" /></li>
+	</ul>
+
+	<h2>Example 2</h2>
+	<ul id="carousel2">
+		<li data-plusshift-thumbnail="i/image1.png"><img src="i/image1.png" /></li>
+		<li data-plusshift-thumbnail="i/image2.png"><img src="i/image2.png" /></li>
+		<li data-plusshift-thumbnail="i/image3.png"><img src="i/image3.png" /></li>
+		<li data-plusshift-thumbnail="i/image1.png"><img src="i/image1.png" /></li>
+		<li data-plusshift-thumbnail="i/image2.png"><img src="i/image2.png" /></li>
+		<li data-plusshift-thumbnail="i/image3.png"><img src="i/image3.png" /></li>
+		<li data-plusshift-thumbnail="i/image1.png"><img src="i/image1.png" /></li>
+		<li data-plusshift-thumbnail="i/image2.png"><img src="i/image2.png" /></li>
+		<li data-plusshift-thumbnail="i/image3.png"><img src="i/image3.png" /></li>
+		<li data-plusshift-thumbnail="i/image1.png"><img src="i/image1.png" /></li>
+		<li data-plusshift-thumbnail="i/image2.png"><img src="i/image2.png" /></li>
+	</ul>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.plusshift.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+	$('#carousel').plusShift({
+		arrowJump: 2
+	});
+
+	$('#carousel2').plusShift();
+});
+</script>
+</body>
+</html>
