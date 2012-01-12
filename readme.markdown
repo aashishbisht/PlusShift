@@ -92,6 +92,7 @@ Each item *must* be the same width.
 
 ### Pagination titles and thumbnails (optional)
 Add the attributes '*data-plusshift-thumbnail*' and '*data-plusshift-title*' to the carousel items.
+
     attribute="value"
     data-plusshift-thumbnail="path/to/image.jpg"
     data-plusshift-title="Title of Item"
