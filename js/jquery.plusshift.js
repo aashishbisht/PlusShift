@@ -1,5 +1,5 @@
 /*
-* jQuery PlusShift
+* jQuery PlusShift 0.2
 * By Jamy Golden
 * http://css-plus.com
 * @jamygolden
@@ -38,6 +38,9 @@
             base.options = $.extend( {}, $.plusShift.defaults, options );
 
             base.$wrap              = base.$el.parent();
+            base.$navWrap           = null;
+            base.$navPrev           = null;
+            base.$navNext           = null;
             base.$slides            = base.$el.children();
             base.currentSlideIndex  = base.options.defaultSlide;
             base.$currentSlide      = base.$slides.eq( base.currentSlideIndex );
@@ -46,6 +49,7 @@
             base.slideIndexCount    = base.slideCount - 1;
             base.slidePosition      = null;
             base.sliderPosition     = null;
+            base.slidePositionMax   = null;
             base.animating          = false;
             base.slideWidth         = null;
 
@@ -216,8 +220,6 @@
                 base.slidePosition      = base.$currentSlide.position().left;
                 base.slidePositionMax   = base.sliderWidth - base.$wrap.width();
 
-                console.log(base.sliderWidth, base.$wrap.width(), base.slidePositionMax);
-
             // Handle dependant options
                 if ( base.slideCount === 1 ) {
 
@@ -226,8 +228,6 @@
                     base.options.createPagination = false;
 
                 }; // base.slideCount === 1
-
-
 
             // Begin pagination
                 if ( base.options.createPagination ) {
@@ -417,7 +417,7 @@
         arrowJump : 1,
 
         /* Pagination related */
-        createPagination : true, // Creates Numbered pagination
+        createPagination : false, // Creates Numbered pagination
         paginationPosition : 'after', // Where to insert pagination in relation to the slider element ('before', 'prepend', 'append', or 'after')
         paginationWidth : false, // Automatically gives the pagination a dynamic width
 

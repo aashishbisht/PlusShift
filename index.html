@@ -45,11 +45,13 @@
 $(window).load(function(){ // window.load is used to make sure the plugin detects the width of the images once they've loaded
 	$('#carousel').plusShift({
 		arrowJump: 2,
+		createPagination: true,
 		prevText: '<',
 		nextText: '>'
 	});
 
 	$('#carousel2').plusShift({
+		createPagination: true,
 		prevText: '<',
 		nextText: '>'
 	});
