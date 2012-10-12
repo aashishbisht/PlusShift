@@ -1,5 +1,5 @@
 /*
-* jQuery PlusShift 0.2.1
+* jQuery PlusShift 0.2
 * By Jamy Golden
 * http://css-plus.com
 * @jamygolden
@@ -118,11 +118,9 @@
                                 base.slidePosition = 0;
                             } else {
                                 base.slidePosition = parseFloat( base.$el.position().left ) * -1;
+                                base.slidePosition += base.slideWidth * base.options.arrowJump;
+                                if ( base.slidePosition > base.slidePositionMax ) base.slidePosition = base.slidePositionMax;
                             }
-
-                            base.slidePosition += base.slideWidth * base.options.arrowJump;
-
-                            if ( base.slidePosition > base.slidePositionMax ) base.slidePosition = base.slidePositionMax;
 
                         } else if( slide === 'prev' ) {
 
@@ -130,11 +128,9 @@
                                 base.slidePosition = base.slidePositionMax;
                             } else {
                                 base.slidePosition = parseFloat( base.$el.position().left ) * -1;
+                                base.slidePosition -= base.slideWidth * base.options.arrowJump;
+                                if ( base.slidePosition < 0 ) base.slidePosition = base.slidePositionMax;
                             }
-
-                            base.slidePosition -= base.slideWidth * base.options.arrowJump;
-
-                            if ( base.slidePosition < 0 ) base.slidePosition = 0;
 
                         }
 
